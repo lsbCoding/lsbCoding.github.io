@@ -26,35 +26,38 @@
             font-weight: normal;
             font-style: normal;
         }
+        html {
+            font-size: 16px;
+        }
         .savethedate div {
             display: inline-block;
-            margin-bottom: 0px;
+            margin-bottom: 0rem;
         }
         .space-right {
-            margin: 0 10px;
+            margin: 0 0.625rem;
         }
         .lovelace {
             font-family: 'lovelace', Arial, Helvetica, sans-serif;
         }
         .seasons-lg {
             font-family: 'theseasons', Arial, Helvetica, sans-serif;
-            font-size: 50px;
-            letter-spacing: 5px;
+            font-size: 3.125rem;
+            letter-spacing: 0.313rem;
         }
         .seasons-sm {
             font-family: 'theseasons', Arial, Helvetica, sans-serif;
-            letter-spacing: 4px;
+            letter-spacing: 0.25rem;
         }
         .save {
-            margin: 0px 19px;
+            margin: 0 1.188rem;
         }
         .bdscript {
             font-family: 'bdscript', Arial, Helvetica, sans-serif;
         }
         .rotate {
             transform: rotate(-5.33303deg);
-            font-size: 83px;
-            margin: 0px 15px 0px 0px;
+            font-size: 5.188rem;
+            margin: 0 0.938rem 0 0;
         }
         body {
             display: flex;
@@ -76,30 +79,42 @@
         }
         img {
             width: 100%;
-            max-width: 600px;
+            max-width: 37.5rem;
         }
         .centered-text {
             position: absolute;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            font-size: 24px;
+            font-size: 1.5rem;
             font-weight: bold;
         }
         .guest-name {
-            font-size: 60px;
-            margin-left: 5px;
+            font-size: 3.75rem;
+            margin-left: 0.313rem;
         }
         .us {
-            font-size: 35px;
-            margin-top: 10px;
+            font-size: 2.188rem;
+            margin-top: 0.625rem;
         }
         .card {
-            height: calc(100vh - 30px);
-            padding: 20px;
+            height: calc(100vh - 1.875rem);
+            padding: 1.25rem;
             background-color: white;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a box shadow for the raised effect */
+            border-radius: 0.5rem;
+            box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1); /* Add a box shadow for the raised effect */
+        }
+        /* Media query for smaller screens */
+        @media (max-width: 414px) {
+            .seasons-lg {
+                font-family: 'theseasons', Arial, Helvetica, sans-serif;
+                font-size: 2.125rem;
+                letter-spacing: 0.313rem;
+            }
+            .save {
+                margin: 0 1.188rem;
+                margin-left: 0rem;
+            }
         }
     </style>
 </head>
@@ -114,7 +129,7 @@
             <h2 class="seasons-sm us">GAIL + LARRY</h2>
             <h3 class="lovelace">SEPTEMBER 14, 2024</h3>
             <h3 class="lovelace">TAIPEI, TAIWAN</h3>
-            <h3 class="lovelace">FORMAL INVITATION TO FOLLOW FOR<br><span class="bdscript guest-name">{}</span>.</h3>
+            <h3 class="lovelace">FORMAL INVITATION TO FOLLOW FOR<br><span class="bdscript guest-name">Pam Goncalves</span>.</h3>
         </main>
     </div>
 </body>

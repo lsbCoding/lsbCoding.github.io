@@ -103,6 +103,18 @@ template_html = """<!DOCTYPE html>
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a box shadow for the raised effect */
         }}
+        /* Media query for smaller screens */
+        @media (max-width: 414px) {{
+            .seasons-lg {{
+                font-family: 'theseasons', Arial, Helvetica, sans-serif;
+                font-size: 2.125rem;
+                letter-spacing: 0.313rem;
+            }}
+            .save {{
+                margin: 0 1.188rem;
+                margin-left: 0rem;
+            }}
+        }}
     </style>
 </head>
 <body>

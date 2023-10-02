@@ -104,7 +104,7 @@ template_html = """<!DOCTYPE html>
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a box shadow for the raised effect */
         }}
         /* Media query for smaller screens */
-        @media (max-width: 414px) {{
+        @media (max-width: 428px) {{
             .seasons-lg {{
                 font-family: 'theseasons', Arial, Helvetica, sans-serif;
                 font-size: 2.125rem;

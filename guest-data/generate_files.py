@@ -15,6 +15,13 @@ template_html = """<!DOCTYPE html>
             font-style: normal;
         }}
         @font-face {{
+            font-family: 'alchemist';
+            src: url('../../fonts/alchemist.otf') format('opentype');
+            /* You can include additional font formats here if needed */
+            font-weight: normal;
+            font-style: normal;
+        }}
+        @font-face {{
             font-family: 'bdscript';
             src: url('../../fonts/bdscript.otf') format('opentype');
             /* You can include additional font formats here if needed */
@@ -32,11 +39,8 @@ template_html = """<!DOCTYPE html>
             display: inline-block;
             margin-bottom: 0px;
         }}
-        .space-right {{
-            margin: 0 10px;
-        }}
         .lovelace {{
-            font-family: 'lovelace', Arial, Helvetica, sans-serif;
+            font-family: 'alchemist', Arial, Helvetica, sans-serif;
         }}
         .seasons-lg {{
             font-family: 'theseasons', Arial, Helvetica, sans-serif;

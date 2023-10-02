@@ -119,7 +119,7 @@ template_html = """<!DOCTYPE html>
                 margin-left: 0rem;
             }}
             .guest-name {{
-                font-size: 2.55rem;
+                font-size: 3.55rem;
                 margin-left: 0.213rem;
             }}
             .us {{

@@ -114,6 +114,14 @@ template_html = """<!DOCTYPE html>
                 margin: 0 1.188rem;
                 margin-left: 0rem;
             }}
+            .guest-name {{
+                font-size: 2.55rem;
+                margin-left: 0.213rem;
+            }}
+            .us {{
+                font-size: 1.488rem;
+                margin-top: 0.425rem;
+            }}
         }}
     </style>
 </head>

@@ -56,6 +56,21 @@
                 margin-top:18rem;
             }
         }
+        .resize-img {
+        }
+
+        /* Apply different styles for smaller screens using media queries */
+        @media only screen and (max-width: 767px) {
+            .resize-img {
+                content: url('img/logo-md-gold.png');
+            }
+        }
+
+        @media only screen and (min-width: 768px) {
+            .resize-img {
+                content: url('img/logo-lg-gold.png');
+            }
+        }
     </style>
 
     <link rel="stylesheet" href="css/normalize.min.css">
@@ -121,7 +136,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12 text-center">
-                <img src="img/logo-lg-gold.png">
+                <img class="resize-img" src="img/logo-lg-gold.png">
                 <!-- <h3>We are getting married!</h3>
                 <p>The date is 14<sup>th</sup> of September '24 and we would like you to be a part of
                     it.</p> -->

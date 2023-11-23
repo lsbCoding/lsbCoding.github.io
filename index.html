@@ -49,6 +49,231 @@
                 document.write('<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"><\/script>');
             }
         }
+        
+        function showLocation(position) {
+            var latitude = position.coords.latitude;
+            var longitude = position.coords.longitude;
+
+            // Check if the user is within a specific region
+            var isUserInUS = checkIfUserInUS(latitude, longitude);
+
+            // Set the language based on the user's location
+            if (isUserInUS) {
+                setLanguage('en'); // Set English for users in the US
+            } else {
+                setLanguage('zh-tw'); // Set Mandarin for users outside the US (example)
+            }
+        }
+
+        function showError(error) {
+            // Handle errors when retrieving the location
+            console.log("Error getting location: " + error.message);
+            // Default to a language (e.g., English) if geolocation fails
+            setLanguage('en');
+        }
+
+        function checkIfUserInUS(latitude, longitude) {
+            // Check if the user is within the US based on coordinates (a simple example)
+            // You may need a more sophisticated method or use a geocoding service for accurate results
+            // Here, we are assuming a rough bounding box for the continental US
+            return (
+                latitude >= 24.396308 && latitude <= 49.384358 &&
+                longitude >= -125.000000 && longitude <= -66.934570
+            );
+        }
+
+        function setLanguage(languageCode) {
+            // Set the language of the website
+            document.documentElement.lang = languageCode;
+
+            // Change the greeting message based on the language
+            var element1 = document.getElementById('ourStoryItem');
+            if (languageCode === 'en') {
+                element1.textContent = 'Our Story';
+            } else if (languageCode === 'zh-tw') {
+                element1.textContent = '我们的故事';
+            }
+
+            var element2 = document.getElementById('engPicsItem');
+            if (languageCode === 'en') {
+                element2.textContent = 'Engagement Pictures';
+            } else if (languageCode === 'zh-tw') {
+                element2.textContent = '我们的故事';
+            }
+
+            var element3 = document.getElementById('schedItem');
+            if (languageCode === 'en') {
+                element3.textContent = 'Schedule';
+            } else if (languageCode === 'zh-tw') {
+                element3.textContent = '我们的故事';
+            }
+
+            var element4 = document.getElementById('cityItem');
+            if (languageCode === 'en') {
+                element4.textContent = 'Glimpse of the city';
+            } else if (languageCode === 'zh-tw') {
+                element4.textContent = '我们的故事';
+            }
+
+            var element5 = document.getElementById('venueItem');
+            if (languageCode === 'en') {
+                element5.textContent = 'Venue';
+            } else if (languageCode === 'zh-tw') {
+                element5.textContent = '我们的故事';
+            }
+
+            var element6 = document.getElementById('ourStoryHead');
+            if (languageCode === 'en') {
+                element6.textContent = 'Our Story';
+            } else if (languageCode === 'zh-tw') {
+                element6.textContent = '我们的故事';
+            }
+
+            var element7 = document.getElementById('story1');
+            if (languageCode === 'en') {
+                element7.textContent = "We met the way so many do these days, through the magic of the internet. After Gail confirmed Larry wasn't some kind of weirdo, we met first our first date exactly where you might imagine Gail would want a first date to be, a bubble tea shop. We both felt an attraction and after weeks of Larry trying to pin her down, Gail decided to give him a real shot.";
+            } else if (languageCode === 'zh-tw') {
+                element7.textContent = '我们的故事';
+            }
+
+            var element8 = document.getElementById('story2');
+            if (languageCode === 'en') {
+                element8.textContent = 'After dating, flying to Taipei to met Gail\'s family, and surviving COVID together, Larry faked a birthday picnic for Gail at Potomac Park in DC to propose, thankfully she said \"Yes!\". Now we\'ve made it here and we are excited to celebrate this wonderful day with our family and closest friends.';
+            } else if (languageCode === 'zh-tw') {
+                element8.textContent = '我们的故事';
+            }
+
+            var element9 = document.getElementById('engPicsHead');
+            if (languageCode === 'en') {
+                element9.textContent = 'Engagement Pictures';
+            } else if (languageCode === 'zh-tw') {
+                element9.textContent = '我们的故事';
+            }
+
+            var element10 = document.getElementById('schedHead');
+            if (languageCode === 'en') {
+                element10.textContent = 'Schedule';
+            } else if (languageCode === 'zh-tw') {
+                element10.textContent = '我们的故事';
+            }
+
+            var element11 = document.getElementById('ceremony');
+            if (languageCode === 'en') {
+                element11.textContent = 'Wedding Ceremony';
+            } else if (languageCode === 'zh-tw') {
+                element11.textContent = '我们的故事';
+            }
+
+            var element12 = document.getElementById('cerTime');
+            if (languageCode === 'en') {
+                element12.textContent = '11am';
+            } else if (languageCode === 'zh-tw') {
+                element12.textContent = '1100';
+            }
+
+            var element13 = document.getElementById('cerText');
+            if (languageCode === 'en') {
+                element13.textContent = 'Meet us in the Grand Salon on the 8th floor of the Mandarin Oriental. Find your seat then Gail and Larry will join you shortly to tie the knot!';
+            } else if (languageCode === 'zh-tw') {
+                element13.textContent = '我们的故事';
+            }
+
+            var element14 = document.getElementById('recep');
+            if (languageCode === 'en') {
+                element14.textContent = 'Wedding Reception';
+            } else if (languageCode === 'zh-tw') {
+                element14.textContent = '我们的故事';
+            }
+
+            var element15 = document.getElementById('recepTime');
+            if (languageCode === 'en') {
+                element15.textContent = '12pm-3pm';
+            } else if (languageCode === 'zh-tw') {
+                element15.textContent = '1200-1500';
+            }
+
+            var element16 = document.getElementById('recepText');
+            if (languageCode === 'en') {
+                element16.textContent = 'Don\'t go anywhere! Seriously, just stay in your seat and your food will come to you, but feel free to move around and mingle until it\'s time to eat.';
+            } else if (languageCode === 'zh-tw') {
+                element16.textContent = '我们的故事';
+            }
+
+            var element17 = document.getElementById('dress');
+            if (languageCode === 'en') {
+                element17.textContent = 'Dress Code';
+            } else if (languageCode === 'zh-tw') {
+                element17.textContent = '我们的故事';
+            }
+
+            var element18 = document.getElementById('dresscode');
+            if (languageCode === 'en') {
+                element18.textContent = 'Dress Code';
+            } else if (languageCode === 'zh-tw') {
+                element18.textContent = '我们的故事';
+            }
+            
+            var element19 = document.getElementById('venue');
+            if (languageCode === 'en') {
+                element19.textContent = 'Dress Code';
+            } else if (languageCode === 'zh-tw') {
+                element19.textContent = '我们的故事';
+            }
+
+            var element20 = document.getElementById('taipei');
+            if (languageCode === 'en') {
+                element20.textContent = 'Taipei';
+            } else if (languageCode === 'zh-tw') {
+                element20.textContent = '我们的故事';
+            }
+
+            var element21 = document.getElementById('heart');
+            if (languageCode === 'en') {
+                element21.textContent = 'Heart of Asia';
+            } else if (languageCode === 'zh-tw') {
+                element21.textContent = '我们的故事';
+            }
+
+            var element22 = document.getElementById('dir');
+            if (languageCode === 'en') {
+                element22.textContent = 'How do I get there?';
+            } else if (languageCode === 'zh-tw') {
+                element22.textContent = '我们的故事';
+            }
+            
+            var element23 = document.getElementById('toTaiwan');
+            if (languageCode === 'en') {
+                element23.textContent = 'Getting to Taiwan';
+            } else if (languageCode === 'zh-tw') {
+                element23.textContent = '我们的故事';
+            }
+
+            var element24 = document.getElementById('flightDir');
+            if (languageCode === 'en') {
+                element24.textContent = 'We recommend flying into either Taoyuan International Airport (TPE) or Taipei Songshan Airport (TSA)';
+            } else if (languageCode === 'zh-tw') {
+                element24.textContent = '我们的故事';
+            }
+
+            var element25 = document.getElementById('venueDir');
+            if (languageCode === 'en') {
+                element25.textContent = 'Getting to the Venue';
+            } else if (languageCode === 'zh-tw') {
+                element25.textContent = '我们的故事';
+            }
+            // Add more conditions for other languages as needed
+        }
+
+        // Check if the geolocation API is supported by the browser
+        if (navigator.geolocation) {
+            // Request the user's location
+            navigator.geolocation.getCurrentPosition(showLocation, showError);
+        } else {
+            // Display an error message if geolocation is not supported
+            console.log("Geolocation is not supported by your browser.");
+            // Default to a language (e.g., English) if geolocation is not supported
+            setLanguage('en');
+        }
     </script>
     <style>
         @media (max-width: 429px) {
@@ -97,11 +322,11 @@
                 <div class="header-nav">
                     <nav>
                         <ul class="primary-nav">
-                            <li><a href="#intro">Our Story</a></li>
-                            <li><a href="#eng-pics">Engagement Pictures</a></li>
-                            <li><a href="#events">Schedule</a></li>
-                            <li class="hidden-sm hidden-xs"><a href="#video-header">Glimpse of the city</a></li>
-                            <li class="hidden-sm hidden-xs"><a href="#map" class="login">Venue</a></li>
+                            <li><a id="ourStoryItem" href="#intro">Our Story</a></li>
+                            <li><a id="engPicsItem" href="#eng-pics">Engagement Pictures</a></li>
+                            <li><a id="schedItem" href="#events">Schedule</a></li>
+                            <li class="hidden-sm hidden-xs"><a id="cityItem" href="#video-header">Glimpse of the city</a></li>
+                            <li class="hidden-sm hidden-xs"><a id="venueItem" href="#map" class="login">Venue</a></li>
                             <!-- <li><a href="#rsvp" class="btn-white btn-small">RSVP</a></li> -->
                         </ul>
                     </nav>
@@ -150,16 +375,16 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12 text-center">
-                <h3 class="header">Our Story</h3>
+                <h3 id="ourStoryHead" class="header">Our Story</h3>
             </div>
         </div>
         <div class="row">
             <div class="col-md-3 hidden-sm hidden-xs"><img src="img/lb.png" class="wp1"></div>
             <div class="col-md-6">
                 <p>
-                    We met the way so many do these days, through the magic of the internet. After Gail confirmed Larry wasn't some kind of weirdo, we met first our first date exactly where you might imagine Gail would want a first date to be, a bubble tea shop. We both felt an attraction and after weeks of Larry trying to pin her down, Gail decided to give him a real shot.
+                    <span id="story1">We met the way so many do these days, through the magic of the internet. After Gail confirmed Larry wasn't some kind of weirdo, we met first our first date exactly where you might imagine Gail would want a first date to be, a bubble tea shop. We both felt an attraction and after weeks of Larry trying to pin her down, Gail decided to give him a real shot.</span>
                     <br><br>
-                    After dating, flying to Taipei to met Gail's family, and surviving COVID together, Larry faked a birthday picnic for Gail at Potomac Park in DC to propose, thankfully she said "Yes!". Now we've made it here and we are excited to celebrate this wonderful day with our family and closest friends.
+                    <span id="story2">After dating, flying to Taipei to met Gail's family, and surviving COVID together, Larry faked a birthday picnic for Gail at Potomac Park in DC to propose, thankfully she said "Yes!". Now we've made it here and we are excited to celebrate this wonderful day with our family and closest friends.</span>
                 </p>
             </div>
             <div class="col-md-3 hidden-sm hidden-xs"><img src="img/gc.jpg" class="wp2"></div>
@@ -193,7 +418,7 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-12 text-center">
-                <h3 class="header">Engagement Pics</h3>
+                <h3 id="engPicsHead" class="header">Engagement Pics</h3>
             </div>
         </div>
         <div class="row">
@@ -341,16 +566,15 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12 text-center">
-                <h3 class="header">Schedule</h3>
+                <h3 id="schedHead" class="header">Schedule</h3>
             </div>
         </div>
         <div class="row">
             <!-- <div class="col-md-12 text-center"> -->
             <div class="col-md-6 col-sm-12 col-xs-12 leftcol">
                 <div class="wp3">
-                    <h5>Wedding Ceremony<span class="time">11AM</span></h5>
-                    <p>This is the main event in the entire wedding when the bride and the groom tie the
-                        knot.</p>
+                    <h5 id="ceremony">Wedding Ceremony<span id="cerTime" class="time">11AM</span></h5>
+                    <p id="cerText">Meet us in the Grand Salon on the 8th floor of the Mandarin Oriental. Find your seat then Gail and Larry will join you shortly to tie the knot!</p>
                 </div>
                 <!-- <div class="wp5">
                     <h5>Cocktail Night <span class="time">7PM - 12AM</span></h5>
@@ -362,8 +586,8 @@
             </div>
             <div class="col-md-6 col-sm-12 col-xs-12 rightcol">
                 <div class="wp4">
-                    <h5>Wedding Reception<span class="time">12PM-3PM</span></h5>
-                    <p>This is the party part.</p>
+                    <h5 id="recep">Wedding Reception<span id="recepTime" class="time">12PM-3PM</span></h5>
+                    <p id="recepText">Don't go anywhere! Seriously, just stay in your seat and your food will come to you, but feel free to move around and mingle until it's time to eat.</p>
                 </div>
                 <!-- <div class="wp6">
                     <h5>Wedding Ceremony<span class="time">11AM</span></h5>
@@ -373,7 +597,7 @@
         </div>
         <div class="row section-padding">
             <div class="col-md-4 col-md-offset-4 text-center">
-                <a class="btn btn-accent btn-small" data-toggle="modal" data-target="#dc-modal">
+                <a id="dress" class="btn btn-accent btn-small" data-toggle="modal" data-target="#dc-modal">
                     <i class="fa fa-barcode"></i>&nbsp;&nbsp;Dress code
                 </a>
             </div>
@@ -386,8 +610,7 @@
                 <div class="modal-body">
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span>&times;</span>
                     </button>
-                    <h3 class="text-center section-padding">Ugh... dress codes?</h3>
-                    <h5>Wedding <span class="time">11AM-3PM</span></h5>
+                    <h3 id="dresscode" class="text-center section-padding">Dress Code</h3>
                     <p>
                         <strong>Look your best!</strong>
                         <br>
@@ -413,7 +636,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12 text-center">
-                <h3>Where's this thing going down?</h3>
+                <h3 id="venue">Where's this thing going down?</h3>
             </div>
         </div>
     </div>
@@ -424,22 +647,22 @@
          data-property="{videoURL:'https://youtu.be/yyttxJz1p4w',containment:'#video-bg',autoPlay:true, mute:true, showControls:false, startAt:590, stopAt:627, opacity:1}">
     </div>
     <div id="video-content">
-        <h5>Taipei</h5>
-        <p>Heart of Asia</p>
+        <h5 id="taipei">Taipei</h5>
+        <p id="heart">Heart of Asia</p>
     </div>
 </section>
 
 <section id="map" class="section-padding">
     <div class="text-center">
-        <h3>How do I get there?</h3>
+        <h3 id="dir">How do I get there?</h3>
     </div>
     <div class="text-center">
-        <h4>Getting to Taiwan</h4>
+        <h4 id="toTaiwan">Getting to Taiwan</h4>
         <h5><i class="fa fa-plane fa-4x"></i></h5>
-        <p>We recommend flying into either Taoyuan International Airport (TPE) or Taipei Songshan Airport (TSA)</p>
+        <p id="flightDir">We recommend flying into either Taoyuan International Airport (TPE) or Taipei Songshan Airport (TSA)</p>
     </div>
     <div class="text-center">
-        <h4>Getting to the Venue</h4>
+        <h4 id="venueDir">Getting to the Venue</h4>
         <h5><i class="fa fa-taxi fa-4x"></i></h5>
     </div>
     <div id="map-canvas" style="position: relative; overflow: hidden; background: url('./img/taipei_map.jpg') center center;"></div>

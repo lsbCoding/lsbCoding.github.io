@@ -50,38 +50,6 @@
             }
         }
         
-        function showLocation(position) {
-            var latitude = position.coords.latitude;
-            var longitude = position.coords.longitude;
-
-            // Check if the user is within a specific region
-            var isUserInUS = checkIfUserInUS(latitude, longitude);
-
-            // Set the language based on the user's location
-            if (isUserInUS) {
-                setLanguage('zh-tw'); // Set English for users in the US
-            } else {
-                setLanguage('en'); // Set Mandarin for users outside the US (example)
-            }
-        }
-
-        function showError(error) {
-            // Handle errors when retrieving the location
-            console.log("Error getting location: " + error.message);
-            // Default to a language (e.g., English) if geolocation fails
-            setLanguage('en');
-        }
-
-        function checkIfUserInUS(latitude, longitude) {
-            // Check if the user is within the US based on coordinates (a simple example)
-            // You may need a more sophisticated method or use a geocoding service for accurate results
-            // Here, we are assuming a rough bounding box for the continental US
-            return (
-                latitude >= 24.396308 && latitude <= 49.384358 &&
-                longitude >= -125.000000 && longitude <= -66.934570
-            );
-        }
-
         function setLanguage(languageCode) {
             // Set the language of the website
             document.documentElement.lang = languageCode;
@@ -264,16 +232,36 @@
             // Add more conditions for other languages as needed
         }
 
-        // Check if the geolocation API is supported by the browser
-        if (navigator.geolocation) {
-            // Request the user's location
-            navigator.geolocation.getCurrentPosition(showLocation, showError);
-        } else {
-            // Display an error message if geolocation is not supported
-            console.log("Geolocation is not supported by your browser.");
-            // Default to a language (e.g., English) if geolocation is not supported
-            setLanguage('en');
+        function detectAndSetLanguage() {
+            // Default language
+            var defaultLanguage = 'zh-tw';
+
+            // Fetch the user's IP address from the ipinfo.io API
+            fetch('https://ipinfo.io?token=f7b4c8f39fe024')
+                .then(response => response.json())
+                .then(data => {
+                    
+                    var isUserInUS = data.country === 'US';
+
+                    if (isUserInUS) {
+                        // Set language to Mandarin Chinese if the user is in China
+                        setLanguage('en');
+                    } else {
+                        // Set the default language for users outside China
+                        setLanguage(defaultLanguage);
+                    }
+                })
+                .catch(error => {
+                    // Handle errors when fetching IP information
+                    console.error('Error getting IP information: ', error);
+
+                    // Set the default language in case of an error
+                    setLanguage(defaultLanguage);
+                });
         }
+
+        // Call the function to detect and set the language on page load
+        detectAndSetLanguage();
     </script>
     <style>
         @media (max-width: 429px) {

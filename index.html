@@ -240,8 +240,6 @@
             fetch('https://ipinfo.io?token=f7b4c8f39fe024')
                 .then(response => response.json())
                 .then(data => {
-                    console.log('data:', data);
-                    console.log('country: ', data.country);
                     var isUserInUS = data.country === 'US';
 
                     if (isUserInUS) {

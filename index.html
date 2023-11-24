@@ -153,25 +153,25 @@
                 element16.textContent = '不要走開！真的，就待在你的座位上，食物會送到你那裡，但隨時可以四處走動和交往，直到吃飯的時間。';
             }
 
-            var element17 = document.getElementById('dress');
-            if (languageCode === 'en') {
-                element17.textContent = 'Dress Code';
-            } else if (languageCode === 'zh-tw') {
-                element17.textContent = '我们的故事';
-            }
+            // var element17 = document.getElementById('dress');
+            // if (languageCode === 'en') {
+            //     element17.textContent = 'Dress Code';
+            // } else if (languageCode === 'zh-tw') {
+            //     element17.textContent = '我们的故事';
+            // }
 
-            var element18 = document.getElementById('dresscode');
-            if (languageCode === 'en') {
-                element18.textContent = 'Dress Code';
-            } else if (languageCode === 'zh-tw') {
-                element18.textContent = '我们的故事';
-            }
+            // var element18 = document.getElementById('dresscode');
+            // if (languageCode === 'en') {
+            //     element18.textContent = 'Dress Code';
+            // } else if (languageCode === 'zh-tw') {
+            //     element18.textContent = '我们的故事';
+            // }
             
             var element19 = document.getElementById('venue');
             if (languageCode === 'en') {
-                element19.textContent = 'Venue';
+                element19.textContent = 'Where\'s this thing going down?';
             } else if (languageCode === 'zh-tw') {
-                element19.textContent = '場地';
+                element19.textContent = '這件事在哪裡發生？';
             }
 
             var element20 = document.getElementById('taipei');
@@ -192,28 +192,77 @@
             if (languageCode === 'en') {
                 element22.textContent = 'How do I get there?';
             } else if (languageCode === 'zh-tw') {
-                element22.textContent = '我们的故事';
+                element22.textContent = '我怎麼去那裡？';
             }
             
             var element23 = document.getElementById('toTaiwan');
             if (languageCode === 'en') {
                 element23.textContent = 'Getting to Taiwan';
             } else if (languageCode === 'zh-tw') {
-                element23.textContent = '我们的故事';
+                element23.textContent = '前往台灣';
             }
 
             var element24 = document.getElementById('flightDir');
             if (languageCode === 'en') {
                 element24.textContent = 'We recommend flying into either Taoyuan International Airport (TPE) or Taipei Songshan Airport (TSA)';
             } else if (languageCode === 'zh-tw') {
-                element24.textContent = '我们的故事';
+                element24.textContent = '我們建議搭乘飛機到桃園國際機場（TPE）或台北松山機場（TSA）';
             }
 
             var element25 = document.getElementById('venueDir');
             if (languageCode === 'en') {
                 element25.textContent = 'Getting to the Venue';
             } else if (languageCode === 'zh-tw') {
-                element25.textContent = '我们的故事';
+                element25.textContent = '前往活動地點';
+            }
+
+            var element26 = document.getElementById('hotel');
+            if (languageCode === 'en') {
+                element26.textContent = 'Mandarin Oriental Taipei';
+            } else if (languageCode === 'zh-tw') {
+                element26.textContent = '文華東方酒店';
+            }
+
+            var element27 = document.getElementById('hotelAddr');
+            if (languageCode === 'en') {
+                element27.textContent = '158 Dunhua North Road, Songshan District, Taipei, Taiwan 10548';
+            } else if (languageCode === 'zh-tw') {
+                element27.textContent = '台灣台北市松山區敦化北路158號 10548';
+            }
+
+            var element28 = document.getElementById('hotelInfo');
+            if (languageCode === 'en') {
+                element28.textContent = 'Hotel Information';
+            } else if (languageCode === 'zh-tw') {
+                element28.textContent = '酒店資訊';
+            }
+
+            var element29 = document.getElementById('hotelNumber');
+            if (languageCode === 'en') {
+                element29.textContent = '+886 2 2715 6888';
+            } else if (languageCode === 'zh-tw') {
+                element29.textContent = '+886 2 2715 6888';
+            }
+
+            var element30 = document.getElementById('uber');
+            if (languageCode === 'en') {
+                element30.textContent = 'Book Uber';
+            } else if (languageCode === 'zh-tw') {
+                element30.textContent = '預約Uber';
+            }
+
+            var element31 = document.getElementById('transitHead');
+            if (languageCode === 'en') {
+                element31.textContent = 'Prefer public transit?';
+            } else if (languageCode === 'zh-tw') {
+                element31.textContent = '喜歡搭乘公共交通嗎？';
+            }
+
+            var element32 = document.getElementById('transitInfo');
+            if (languageCode === 'en') {
+                element32.textContent = 'The Mandarin Oriental Taipei is accessible from either the Taipei Arena or Nanjing Fuxing stations on the Songshan-Xindian (Green) Line, or the Nanjing Fuxing station on the Wenshu (Brown) Line. The hotel is also accessible by multiple bus lines, just check google maps for the most convenient ones. (Don\'t forget to tap on and off on buses!)';
+            } else if (languageCode === 'zh-tw') {
+                element32.textContent = '文華東方酒店可以從松山新店（綠線）的台北小巨蛋站或南京復興站，以及文湖線（棕線）的南京復興站抵達。酒店也可以搭乘多條公車線路，只需查看Google地圖找到最方便的路線即可。（別忘了在公車上刷卡！）';
             }
             // Add more conditions for other languages as needed
         }
@@ -226,7 +275,7 @@
             fetch('https://ipinfo.io?token=f7b4c8f39fe024')
                 .then(response => response.json())
                 .then(data => {
-                    var isUserInUS = data.country === 'US';
+                    var isUserInUS = data.country === 'UK';
 
                     if (isUserInUS) {
                         // Set language to Mandarin Chinese if the user is in China
@@ -650,17 +699,17 @@
                 <div id="map-content" class="pointer-events-auto">
                     <div class="row">
                         <div class="col-md-6">
-                            <h5>Mandarin Oriental Taipei</h5>
-                            <p>158 Dunhua North Road, Songshan District, Taipei, Taiwan 10548</p>
+                            <h5 id="hotel">Mandarin Oriental Taipei</h5>
+                            <p id="hotelAddr">158 Dunhua North Road, Songshan District, Taipei, Taiwan 10548</p>
                         </div>
                         <div class="col-md-6">
-                            <h5>Hotel Information</h5>
-                            <p><i class="fa fa-mobile"></i> <a href="tel://+886227156888">+886 2 2715 6888</a></p>
+                            <h5 id="hotelInfo">Hotel Information</h5>
+                            <p><i class="fa fa-mobile"></i> <a id="hotelNumber" href="tel://+886227156888">+886 2 2715 6888</a></p>
                         </div>
                     </div>
                     <div class="row text-center">
                         <div class="col-md-12" style="padding: 5px;">
-                            <a class="btn btn-fill btn-small"
+                            <a id="uber" class="btn btn-fill btn-small"
                                href="https://m.uber.com/go/pickup?drop%5B0%5D=%7B%22addressLine1%22%3A%22Mandarin%20Oriental%2C%20Taipei%22%2C%22addressLine2%22%3A%22No.%20158%2C%20DunHua%20N%20Rd%2C%20Songshan%20District%2C%20Taipei%20City%22%2C%22id%22%3A%22ChIJWXlWGearQjQRNEj80OdQoVw%22%2C%22source%22%3A%22SEARCH%22%2C%22latitude%22%3A25.0557416%2C%22longitude%22%3A121.5481485%2C%22provider%22%3A%22google_places%22%7D"><i
                                     class="fa fa-taxi"></i>&nbsp;&nbsp;Book Uber</a>
                                     
@@ -677,9 +726,9 @@
     <br>
     <div class="add-margin"></div>
     <div class="col-md-10 col-md-offset-1 text-center">
-        <h4>Prefer public transit?</h4>
+        <h4 id="transitHead">Prefer public transit?</h4>
         <h5><i class="fa fa-subway fa-4x"></i></h5>
-        <p>The Mandarin Oriental Taipei is accessible from either the Taipei Arena or Nanjing Fuxing stations on the Songshan-Xindian (Green) Line, or the Nanjing Fuxing station on the Wenshu (Brown) Line. The hotel is also accessible by multiple bus lines, just check google maps for the most convenient ones. (Don't forget to tap on and off on buses!)</p>
+        <p id="transitInfo">The Mandarin Oriental Taipei is accessible from either the Taipei Arena or Nanjing Fuxing stations on the Songshan-Xindian (Green) Line, or the Nanjing Fuxing station on the Wenshu (Brown) Line. The hotel is also accessible by multiple bus lines, just check google maps for the most convenient ones. (Don't forget to tap on and off on buses!)</p>
     </div>
 </section>
 <!-- 

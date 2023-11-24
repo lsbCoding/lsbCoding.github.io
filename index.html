@@ -275,7 +275,7 @@
             fetch('https://ipinfo.io?token=f7b4c8f39fe024')
                 .then(response => response.json())
                 .then(data => {
-                    var isUserInUS = data.country === 'UK';
+                    var isUserInUS = data.country === 'US';
 
                     if (isUserInUS) {
                         // Set language to Mandarin Chinese if the user is in China

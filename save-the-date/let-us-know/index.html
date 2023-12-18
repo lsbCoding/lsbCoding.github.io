@@ -14,6 +14,11 @@
                 document.write('<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"><\/script>');
             }
         }
+
+        function redirectToNewWebsite() {
+            // Redirect to a different website
+            window.location.href = "https://www.gailandlarry.com";
+        }
     </script>
     <style>
         @font-face {
@@ -271,6 +276,22 @@
                 <div class="col-md-12" id="alert-wrapper"></div>
             </div>
         </form>
+    </div>
+    <!-- Bootstrap Modal -->
+    <div class="modal fade" id="successModal" tabindex="-1" role="dialog" aria-labelledby="successModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="successModalLabel">Form Submitted Successfully</h4>
+                </div>
+                <div class="modal-body">
+                    <p>Thank you for submitting the RSVP form.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" onclick="redirectToNewWebsite()">OK</button>
+                </div>
+            </div>
+        </div>
     </div>
     <script src="../../js/vendor/jquery-1.11.2.min.js" onerror="loadJsFromCDN('jquery.js')"></script>
 <script src="../../node_modules/waypoints/lib/jquery.waypoints.min.js" onerror="loadJsFromCDN('waypoints.js')"></script>

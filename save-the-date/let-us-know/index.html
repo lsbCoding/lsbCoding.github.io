@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Let us know!</title>
+    <style>
+        @font-face {
+            font-family: 'lovelace';
+            src: url('../../fonts/lovelace.otf') format('opentype');
+            /* You can include additional font formats here if needed */
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'alchemist';
+            src: url('../../fonts/alchemist.otf') format('opentype');
+            /* You can include additional font formats here if needed */
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'bdscript';
+            src: url('../../fonts/bdscript.otf') format('opentype');
+            /* You can include additional font formats here if needed */
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'theseasons';
+            src: url('../../fonts/theseasons.ttf') format('truetype');
+            /* You can include additional font formats here if needed */
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        .savethedate div {
+            display: inline-block;
+            margin-bottom: 0px;
+        }
+
+        .lovelace {
+            font-family: 'alchemist', Arial, Helvetica, sans-serif;
+        }
+
+        .seasons-lg {
+            font-family: 'theseasons', Arial, Helvetica, sans-serif;
+            font-size: 50px;
+            letter-spacing: 5px;
+        }
+
+        .seasons-sm {
+            font-family: 'theseasons', Arial, Helvetica, sans-serif;
+            letter-spacing: 4px;
+        }
+
+        .save {
+            margin: 0px 19px;
+        }
+
+        .bdscript {
+            font-family: 'bdscript', Arial, Helvetica, sans-serif;
+        }
+
+        .rotate {
+            transform: rotate(-5.33303deg);
+            font-size: 83px;
+            margin: 0px 15px 0px 0px;
+        }
+
+        /* body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        } */
+        header {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 7%;
+        }
+
+        main {
+            text-align: center;
+        }
+
+        img {
+            width: 100%;
+            max-width: 600px;
+        }
+
+        .centered-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .guest-name {
+            font-size: 60px;
+            margin-left: 5px;
+        }
+
+        .us {
+            font-size: 35px;
+            margin-top: 10px;
+        }
+
+        /* .card {
+            height: calc(100vh - 30px);
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+
+        } */
+
+        /* Media query for smaller screens */
+        @media (max-width: 428px) {
+            .seasons-lg {
+                font-family: 'theseasons', Arial, Helvetica, sans-serif;
+                font-size: 2.125rem;
+                letter-spacing: 0.313rem;
+            }
+
+            .save {
+                margin: 0 1.188rem;
+                margin-left: 0rem;
+            }
+
+            .guest-name {
+                font-size: 3.55rem;
+                margin-left: 0.213rem;
+            }
+
+            .us {
+                font-size: 1.488rem;
+                margin-top: 0.425rem;
+            }
+        }
+
+        body {
+            background-color: #f4f4f4;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .card {
+            width: 80%;
+            /* max-width: 400px; */
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin: auto;
+            /* Center the card horizontally */
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        p {
+            text-align: center;
+            color: #666;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            margin-bottom: 8px;
+            color: #333;
+        }
+
+        input,
+        select {
+            margin-bottom: 16px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button {
+            background-color: #4caf50;
+            color: #fff;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+
+<body>
+    <div class="card">
+        <h1 class="seasons-lg save">Should we expect to see you in Taipei?</h1>
+        <p class="lovelace">We would greatly appreciate if you could let us know if you're planning to join us in
+            Taipei.</p>
+        <p class="lovelace">Even if you aren't able to make the trip, we are planning a little get together in Virginia
+            after the wedding so please fill out the rest of the form so we can send you a keep-sake wedding invitation
+            and let you know the details about our Virginia celebration when we have them! </p>
+
+        <form id="rsvp-form" class="rsvp-form" action="" method="POST">
+            <div class="form-group">
+                <label for="name" class="lovelace">Your Name:</label>
+                <input type="text" id="name" name="name" class="form-control" required>
+            </div>
+
+            <div class="form-group">
+                <label for="p1" class="lovelace">Name of your plus one:</label>
+                <input type="text" id="p1" name="p1" class="form-control" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email" class="lovelace">Your Email:</label>
+                <input type="email" id="email" name="email" class="form-control" required>
+            </div>
+
+            <div class="form-group">
+                <label for="addr" class="lovelace">Your Address (Where should we send the invite?):</label>
+                <input type="text" id="addr" name="addr" class="form-control" required>
+            </div>
+
+            <div class="form-group">
+                <label for="attendance" class="lovelace">Will you be coming to Taiwan?</label>
+                <select id="attendance" name="attendance" class="form-control" required>
+                    <option value="yes">Yes, I will be there!</option>
+                    <option value="no">Sorry, I can't make it.</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="addr" class="lovelace">Invite code:</label>
+                <input type="number" name="invite_code" id="invite_code" class="" min="0" required>
+            </div>
+
+            <button type="submit" class="btn btn-success">All Done!</button>
+            <div>
+                <div class="col-md-12" id="alert-wrapper"></div>
+            </div>
+        </form>
+    </div>
+    <script src="js/scripts.min.js"></script>
+</body>
+
+</html>

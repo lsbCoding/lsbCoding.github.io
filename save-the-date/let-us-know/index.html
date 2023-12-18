@@ -231,6 +231,7 @@
 <body>
     <div class="card">
         <h1 class="seasons-lg save">Should we expect to see you in Taipei?</h1>
+        <h3 class="seasons-sm save">September 14, 2024</h3>
         <p class="lovelace">We would greatly appreciate if you could let us know if you're planning to join us in
             Taipei.</p>
         <p class="lovelace">Even if you aren't able to make the trip, we are planning a little get together in Virginia
@@ -246,8 +247,8 @@
             </div>
 
             <div class="form-group">
-                <label for="p1" class="lovelace">Name of your plus one:</label>
-                <input type="text" id="p1" name="p1" class="form-control">
+                <label for="plus1" class="lovelace">Name of your plus one:</label>
+                <input type="text" id="plus1" name="plus1" class="form-control">
             </div>
 
             <div class="form-group">
@@ -256,8 +257,8 @@
             </div>
 
             <div class="form-group">
-                <label for="addr" class="lovelace">Your Address (Where should we send the invite?):</label>
-                <input type="text" id="addr" name="addr" class="form-control" required>
+                <label for="address" class="lovelace">Your Address (Where should we send the invite?):</label>
+                <input type="text" id="address" name="address" class="form-control" required>
             </div>
 
             <div class="form-group">
@@ -271,6 +272,11 @@
             <div class="form-group">
                 <label for="addr" class="lovelace">Invite code:</label>
                 <input type="number" name="invite_code" id="invite_code" class="" min="0" required>
+            </div>
+
+            <div class="form-group">
+                <label for="message" class="lovelace">Want to leave us a message or tell us anything?</label>
+                <textarea id="message" name="message" rows="4"></textarea>
             </div>
 
             <button type="submit" class="btn btn-success">All Done!</button>

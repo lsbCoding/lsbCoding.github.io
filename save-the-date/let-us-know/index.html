@@ -5,6 +5,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Let us know!</title>
+    <script>
+        // load js files from CDN if local node_modules fail
+        function loadJsFromCDN(js) {
+            if (js === 'waypoints.js') {
+                document.write('<script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.js"><\/script>');
+            } else if (js === 'jquery.js') {
+                document.write('<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"><\/script>');
+            }
+        }
+    </script>
     <style>
         @font-face {
             font-family: 'lovelace';
@@ -262,6 +272,13 @@
             </div>
         </form>
     </div>
+    <script src="../../js/vendor/jquery-1.11.2.min.js" onerror="loadJsFromCDN('jquery.js')"></script>
+<script src="../../node_modules/waypoints/lib/jquery.waypoints.min.js" onerror="loadJsFromCDN('waypoints.js')"></script>
+<script src="../../js/jquery.fancybox.pack.js"></script>
+<script src="../../js/vendor/bootstrap.min.js"></script>
+<script src="../../js/jquery.flexslider-min.js"></script>
+<script src="../../js/jquery.mb.YTPlayer.min.js"></script>
+<script src="../../js/vendor/ouical.js"></script>
     <script src="../../js/scripts.min.js"></script>
 </body>
 

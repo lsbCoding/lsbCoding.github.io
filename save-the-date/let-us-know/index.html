@@ -184,7 +184,7 @@
             /* Center the card horizontally */
         }
 
-        h1, h3 {
+        h1, h3, h4 {
             text-align: center;
             color: #333;
         }
@@ -243,56 +243,57 @@
 
 <body>
     <div class="card">
-        <h1 class="seasons-lg save">Should we expect to see you in Taipei?</h1>
-        <h3 class="seasons-sm save">September 14, 2024</h3>
-        <p class="lovelace">We would greatly appreciate if you could let us know if you're planning to join us in
-            Taipei.</p>
-        <p class="lovelace">Even if you aren't able to make the trip, we are planning a little get together in Virginia
-            after the wedding so please fill out the rest of the form so we can send you a keep-sake wedding invitation
-            and let you know the details about our Virginia celebration when we have them! </p>
-
-        <p class="lovelace">If you need more information before making your decision, please check out our wedding website <a href="https://www.gailandlarry.com">gailandlarry.com</a> or get in touch with us!</p>
+        <h1 class="seasons-lg save">期待您參加我們的婚禮！</h1>
+        <br>
+        <h3 class="seasons-sm save">2024年9月14日（六）</h3>
+        <h4 class="seasons-sm save">10:45am 證婚</h4>
+        <h4 class="seasons-sm save">12:00pm 午宴</h4>
+        <h4 class="seasons-sm save">台北東方文華酒店</h4>
+        <p class="lovelace">台北市松山區敦化北路158號</p>
+        <h4 class="seasons-sm save">正式服裝</h4>
+        <p class="lovelace">男士：燕尾服或西裝領帶
+            <br>女士：長禮服、正式小禮服、褲裝禮服或西服<br>我們的網站有更多資訊和照片： <a style="font-size: 2rem;" href="https://www.gailandlarry.com">gailandlarry.com</a> </p>
 
         <form id="rsvp-form" class="rsvp-form" action="" method="POST">
             <div class="form-group">
-                <label for="name" class="lovelace">Your Name:</label>
+                <label for="name" class="lovelace">請問您的大名：</label>
                 <input type="text" id="name" name="name" class="form-control" required>
             </div>
 
             <div class="form-group">
-                <label for="plus1" class="lovelace">Name of your plus one:</label>
+                <label for="plus1" class="lovelace">若您會攜伴參加，請問您伴侶的大名：</label>
                 <input type="text" id="plus1" name="plus1" class="form-control">
             </div>
 
             <div class="form-group">
-                <label for="email" class="lovelace">Your Email:</label>
+                <label for="email" class="lovelace">您的電子郵件信箱：</label>
                 <input type="email" id="email" name="email" class="form-control" required>
             </div>
 
             <div class="form-group">
-                <label for="address" class="lovelace">Your Address (Where should we send the invite?):</label>
-                <input type="text" id="address" name="address" class="form-control" required>
+                <label for="address" class="lovelace">若您希望收到喜帖，請提供您的地址：</label>
+                <input type="text" id="address" name="address" class="form-control">
             </div>
 
             <div class="form-group">
-                <label for="attendance" class="lovelace">Will you be coming to Taiwan?</label>
+                <label for="attendance" class="lovelace">您是否會出席婚宴：</label>
                 <select id="attendance" name="attendance" class="form-control" required>
-                    <option value="yes">Yes, I will be there!</option>
-                    <option value="no">Sorry, I can't make it.</option>
+                    <option value="yes">一定會出席!</option>
+                    <option value="no">可惜無法出席～</option>
                 </select>
             </div>
 
             <div class="form-group">
-                <label for="addr" class="lovelace">Invite code:</label>
+                <label for="addr" class="lovelace">邀請密碼:</label>
                 <input type="number" name="invite_code" id="invite_code" class="" min="0" required>
             </div>
 
             <div class="form-group">
-                <label for="message" class="lovelace">Want to leave us a message or tell us anything?</label>
+                <label for="message" class="lovelace">有什麼話或祝福想和我們說嗎：</label>
                 <textarea id="message" name="message" rows="4"></textarea>
             </div>
 
-            <button type="submit" class="btn btn-success">All Done!</button>
+            <button type="submit" class="btn btn-success">送出表單!</button>
             <div>
                 <div class="col-md-12" id="alert-wrapper"></div>
             </div>

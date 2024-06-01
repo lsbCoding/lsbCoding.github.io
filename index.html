@@ -153,19 +153,54 @@
                 element16.textContent = '不要走開！真的，就待在你的座位上，食物會送到你那裡，但隨時可以四處走動和交往，直到吃飯的時間。';
             }
 
-            // var element17 = document.getElementById('dress');
-            // if (languageCode === 'en') {
-            //     element17.textContent = 'Dress Code';
-            // } else if (languageCode === 'zh-tw') {
-            //     element17.textContent = '我们的故事';
-            // }
+            var element17 = document.getElementById('dress');
+            if (languageCode === 'en') {
+                element17.textContent = 'Dress Code';
+            } else if (languageCode === 'zh-tw') {
+                element17.textContent = '我们的故事';
+            }
 
-            // var element18 = document.getElementById('dresscode');
-            // if (languageCode === 'en') {
-            //     element18.textContent = 'Dress Code';
-            // } else if (languageCode === 'zh-tw') {
-            //     element18.textContent = '我们的故事';
-            // }
+            var element18 = document.getElementById('dresscode');
+            if (languageCode === 'en') {
+                 element18.textContent = 'Dress Code';
+            } else if (languageCode === 'zh-tw') {
+                 element18.textContent = '我们的故事';
+            }
+
+            var element33 = document.getElementById('dcHead');
+            if (languageCode === 'en') {
+                 element33.textContent = 'Look your best! (Formal Attire)';
+            } else if (languageCode === 'zh-tw') {
+                 element33.textContent = '我们的故事';
+            }
+
+            var element34 = document.getElementById('ladies');
+            if (languageCode === 'en') {
+                 element34.textContent = 'Ladies:';
+            } else if (languageCode === 'zh-tw') {
+                 element34.textContent = '我们的故事';
+            }
+
+            var element35 = document.getElementById('ladiestxt');
+            if (languageCode === 'en') {
+                 element35.textContent = 'Floor-length gown, fancy cocktail dress, or dressy pantsuit (please avoid the colors white and red)';
+            } else if (languageCode === 'zh-tw') {
+                 element35.textContent = '我们的故事';
+            }
+
+            var element36 = document.getElementById('gents');
+            if (languageCode === 'en') {
+                 element36.textContent = 'Gentlemen:';
+            } else if (languageCode === 'zh-tw') {
+                 element36.textContent = '我们的故事';
+            }
+
+            var element37 = document.getElementById('gentstxt');
+            if (languageCode === 'en') {
+                 element37.textContent = 'Tuxedo or formal suit and tie (in dark conservative colors)';
+            } else if (languageCode === 'zh-tw') {
+                 element37.textContent = '我们的故事';
+            }
             
             var element19 = document.getElementById('venue');
             if (languageCode === 'en') {
@@ -595,7 +630,7 @@
             <!-- <div class="col-md-12 text-center"> -->
             <div class="col-md-6 col-sm-12 col-xs-12 leftcol">
                 <div class="wp3">
-                    <h5 id="ceremony">Wedding Ceremony<span id="cerTime" class="time">11AM</span></h5>
+                    <h5 id="ceremony">Wedding Ceremony<span id="cerTime" class="time">10:45AM</span></h5>
                     <p id="cerText">Meet us in the Grand Salon on the 8th floor of the Mandarin Oriental. Find your seat then Gail and Larry will join you shortly to tie the knot!</p>
                 </div>
                 <!-- <div class="wp5">
@@ -609,7 +644,7 @@
             <div class="col-md-6 col-sm-12 col-xs-12 rightcol">
                 <div class="wp4">
                     <h5 id="recep">Wedding Reception<span id="recepTime" class="time">12PM-3PM</span></h5>
-                    <p id="recepText">Feel free to get up and mingle or grab a drink, Gail and Larry will return shortly and we can start the meal!</p>
+                    <p id="recepText">Feel free to get up and mingle or grab a drink, Gail and Larry will return shortly and we can start the meal at 12!</p>
                 </div>
                 <!-- <div class="wp6">
                     <h5>Wedding Ceremony<span class="time">11AM</span></h5>
@@ -617,13 +652,13 @@
                         knot.</p>
             </div> -->
         </div>
-        <!-- <div class="row section-padding">
+        <div class="row section-padding">
             <div class="col-md-4 col-md-offset-4 text-center">
                 <a id="dress" class="btn btn-accent btn-small" data-toggle="modal" data-target="#dc-modal">
-                    <i class="fa fa-barcode"></i>&nbsp;&nbsp;Dress code
+                    Dress code
                 </a>
             </div>
-        </div> -->
+        </div>
     </div>
 
     <div id="dc-modal" class="modal fade" tabindex="-1" role="dialog">
@@ -634,9 +669,15 @@
                     </button>
                     <h3 id="dresscode" class="text-center section-padding">Dress Code</h3>
                     <p>
-                        <strong>Look your best!</strong>
+                        <strong id="dcHead">Look your best! (Formal Attire)</strong>
                         <br>
-                        Ladies can wear a formal or traditional dress whereas gentlemen can wear any kind of suit or just blazer. 
+                        <div id="ladies">Ladies:<div>
+                        <br>
+                        <div id="ladiestxt">Floor-length gown, fancy cocktail dress, or dressy pantsuit (please avoid the colors white and red)</div>
+                        <br>
+                        <div id="gents">Gentlemen:</div>
+                        <br>
+                        <div id="gentstxt">Tuxedo or formal suit and tie (in dark conservative colors)</div>
                         <!-- flaunt their unconventional sarees,
                         <a href="https://www.pinterest.com/ramswarooppatra/indo-western-lehengas/">lehengas</a>,
                         <a href="https://www.pinterest.com/ramswarooppatra/indo-western-anarkalis/">anarkalis</a>,

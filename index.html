@@ -302,37 +302,35 @@
             // Add more conditions for other languages as needed
         }
 
-        // function detectAndSetLanguage() {
-        //     // Default language
-        //     var defaultLanguage = 'zh-tw';
+        function detectAndSetLanguage() {
+            // Default language
+            var defaultLanguage = 'zh-tw';
 
-        //     // Fetch the user's IP address from the ipinfo.io API
-        //     fetch('https://ipinfo.io?token=f7b4c8f39fe024')
-        //         .then(response => response.json())
-        //         .then(data => {
-        //             var isUserInUS = data.country === 'US';
+            // Fetch the user's IP address from the ipinfo.io API
+            fetch('https://ipinfo.io?token=f7b4c8f39fe024')
+                .then(response => response.json())
+                .then(data => {
+                    var isUserInUS = data.country === 'US';
 
-        //             if (isUserInUS) {
-        //                 // Set language to Mandarin Chinese if the user is in China
-        //                 setLanguage('en');
-        //             } else {
-        //                 // Set the default language for users outside China
-        //                 setLanguage(defaultLanguage);
-        //             }
-        //         })
-        //         .catch(error => {
-        //             // Handle errors when fetching IP information
-        //             console.error('Error getting IP information: ', error);
+                    // if (isUserInUS) {
+                        // Set language to Mandarin Chinese if the user is in China
+                        // setLanguage('en');
+                    // } else {
+                        // Set the default language for users outside China
+                        setLanguage(defaultLanguage);
+                    // }
+                })
+                .catch(error => {
+                    // Handle errors when fetching IP information
+                    console.error('Error getting IP information: ', error);
 
-        //             // Set the default language in case of an error
-        //             setLanguage(defaultLanguage);
-        //         });
-        // }
+                    // Set the default language in case of an error
+                    setLanguage(defaultLanguage);
+                });
+        }
 
-        // // Call the function to detect and set the language on page load
-        // detectAndSetLanguage();
-        var defaultLanguage = 'zh-tw';
-        setLanguage(defaultLanguage);
+        // Call the function to detect and set the language on page load
+        detectAndSetLanguage();
     </script>
     <style>
         @media (max-width: 990px) {

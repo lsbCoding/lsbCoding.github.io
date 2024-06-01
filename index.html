@@ -101,7 +101,7 @@
             if (languageCode === 'en') {
                 element7.textContent = "We met the way so many do these days, through the magic of the internet. After Gail confirmed Larry wasn't some kind of weirdo, we met for our first date exactly where you might imagine Gail would want a first date to be, a bubble tea shop. We both felt an attraction and after weeks of Larry trying to pin her down, Gail decided to give him a real shot.";
             } else if (languageCode === 'zh-tw') {
-                element7.textContent = '我們是如此多人這些天通過互聯網的魔法相遇的。在蓋爾確認拉里不是某種怪人後，我們第一次見面是在一個泡沫奶茶店，這可能是你能想像到的蓋爾希望第一次約會的地方。我們兩人都感到一種吸引，經過幾個星期拉里試圖約會，蓋爾決定給他一個真正的機會。';
+                element7.textContent = 'Larry述說我們的故事：\<br\>如同你可以想像，Gail和Larry的第一次見面是在一家珍珠奶茶店。我們都感受到了對對方的好感。經過Larry幾個星期的嘗試，Gail決定給他一個機會。';
             }
 
             var element8 = document.getElementById('story2');
@@ -306,27 +306,27 @@
             // Default language
             var defaultLanguage = 'zh-tw';
 
-            // Fetch the user's IP address from the ipinfo.io API
-            fetch('https://ipinfo.io?token=f7b4c8f39fe024')
-                .then(response => response.json())
-                .then(data => {
-                    var isUserInUS = data.country === 'US';
+            // // Fetch the user's IP address from the ipinfo.io API
+            // fetch('https://ipinfo.io?token=f7b4c8f39fe024')
+            //     .then(response => response.json())
+            //     .then(data => {
+            //         var isUserInUS = data.country === 'US';
 
-                    if (isUserInUS) {
-                        // Set language to Mandarin Chinese if the user is in China
-                        setLanguage('en');
-                    } else {
-                        // Set the default language for users outside China
-                        setLanguage(defaultLanguage);
-                    }
-                })
-                .catch(error => {
-                    // Handle errors when fetching IP information
-                    console.error('Error getting IP information: ', error);
+            //         if (isUserInUS) {
+            //             // Set language to Mandarin Chinese if the user is in China
+            //             setLanguage('en');
+            //         } else {
+            //             // Set the default language for users outside China
+            //             setLanguage(defaultLanguage);
+            //         }
+            //     })
+            //     .catch(error => {
+            //         // Handle errors when fetching IP information
+            //         console.error('Error getting IP information: ', error);
 
-                    // Set the default language in case of an error
-                    setLanguage(defaultLanguage);
-                });
+            //         // Set the default language in case of an error
+            //         setLanguage(defaultLanguage);
+            //     });
         }
 
         // Call the function to detect and set the language on page load

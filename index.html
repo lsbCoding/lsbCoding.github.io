@@ -137,84 +137,84 @@
             if (languageCode === 'en') {
                 element11.textContent = 'Wedding Ceremony 10:45am';
             } else if (languageCode === 'zh-tw') {
-                element11.textContent = '婚禮 1045';
+                element11.textContent = '證婚 10:45am';
             }
 
             var element13 = document.getElementById('cerText');
             if (languageCode === 'en') {
                 element13.textContent = 'Meet us in the Grand Salon on the 8th floor of the Mandarin Oriental. Find your seat then Gail and Larry will join you shortly to tie the knot!';
             } else if (languageCode === 'zh-tw') {
-                element13.textContent = '請在文華東方酒店8樓的大宴會廳與我們相會。找到你的座位，蓋爾和拉里將很快加入你們，一同步入婚禮的殿堂！';
+                element13.textContent = '請在文華東方酒店8樓的文華閣與我們相會。找到您的座位，Gail和Larry將很快加入你們！';
             }
 
             var element14 = document.getElementById('recep');
             if (languageCode === 'en') {
-                element14.textContent = 'Wedding Reception 12pm-3pm';
+                element14.textContent = 'Wedding Reception 12pm';
             } else if (languageCode === 'zh-tw') {
-                element14.textContent = '婚禮招待 1200-1500';
+                element14.textContent = '午宴 12:00pm';
             }
 
             var element16 = document.getElementById('recepText');
             if (languageCode === 'en') {
-                element16.textContent = 'Feel free to get up and mingle or grab a drink, Gail and Larry will return shortly and we can start the meal at 12!';
+                element16.textContent = 'Feel free to get up and mingle or grab a drink, Gail and Larry will return shortly and we can start the meal at 12pm!';
             } else if (languageCode === 'zh-tw') {
-                element16.textContent = '不要走開！真的，就待在你的座位上，食物會送到你那裡，但隨時可以四處走動和交往，直到吃飯的時間。';
+                element16.textContent = '期待12點與您共享午宴！';
             }
 
             var element17 = document.getElementById('dress');
             if (languageCode === 'en') {
                 element17.textContent = 'Dress Code';
             } else if (languageCode === 'zh-tw') {
-                element17.textContent = '我们的故事';
+                element17.textContent = '敬邀您盛裝出席 (正式服裝)';
             }
 
             var element18 = document.getElementById('dresscode');
             if (languageCode === 'en') {
                  element18.textContent = 'Dress Code';
             } else if (languageCode === 'zh-tw') {
-                 element18.textContent = '我们的故事';
+                 element18.textContent = '正式服裝';
             }
 
             var element33 = document.getElementById('dcHead');
             if (languageCode === 'en') {
                  element33.textContent = 'Look your best! (Formal Attire)';
             } else if (languageCode === 'zh-tw') {
-                 element33.textContent = '我们的故事';
+                 element33.textContent = '敬邀您盛裝出席 (正式服裝)';
             }
 
             var element34 = document.getElementById('ladies');
             if (languageCode === 'en') {
                  element34.textContent = 'Ladies:';
             } else if (languageCode === 'zh-tw') {
-                 element34.textContent = '我们的故事';
+                 element34.textContent = '女士：';
             }
 
             var element35 = document.getElementById('ladiestxt');
             if (languageCode === 'en') {
                  element35.textContent = 'Floor-length gown, fancy cocktail dress, or dressy pantsuit (please avoid the colors white and red)';
             } else if (languageCode === 'zh-tw') {
-                 element35.textContent = '我们的故事';
+                 element35.textContent = '長禮服、正式小禮服、褲裝禮服或西服 (請避免著白色或紅色）';
             }
 
             var element36 = document.getElementById('gents');
             if (languageCode === 'en') {
                  element36.textContent = 'Gentlemen:';
             } else if (languageCode === 'zh-tw') {
-                 element36.textContent = '我们的故事';
+                 element36.textContent = '男士：';
             }
 
             var element37 = document.getElementById('gentstxt');
             if (languageCode === 'en') {
                  element37.textContent = 'Tuxedo or formal suit and tie (in dark conservative colors)';
             } else if (languageCode === 'zh-tw') {
-                 element37.textContent = '我们的故事';
+                 element37.textContent = '燕尾服或西裝領帶 (黑色、深藍、深色系)';
             }
             
             var element19 = document.getElementById('venue');
             if (languageCode === 'en') {
                 element19.textContent = 'Where\'s this thing going down?';
             } else if (languageCode === 'zh-tw') {
-                element19.textContent = '這件事在哪裡發生？';
+                element19.textContent = '地點';
             }
 
             var element20 = document.getElementById('taipei');
@@ -295,17 +295,26 @@
             }
 
             var element31 = document.getElementById('transitHead');
+            var elementmargin = document.getElementById('addMargin');
+            var elementdiv = document.getElementById('transitDiv');
             if (languageCode === 'en') {
                 element31.textContent = 'Prefer public transit?';
             } else if (languageCode === 'zh-tw') {
-                element31.textContent = '喜歡搭乘公共交通嗎？';
+                elementmargin.style.cssText = 'margin-top:2rem;';
+                var h4_1 = document.createElement('h4');
+                h4_1.textContent = '預計開車嗎？';
+                var p_1 = document.createElement('p');
+                p_1.textContent = '停車場：東方文華的收費停車場為室內停車場，位於B5及B6。'
+                elementdiv.prepend(p_1);
+                elementdiv.prepend(h4_1);
+                element31.textContent = '預計搭乘公共交通嗎？';
             }
 
             var element32 = document.getElementById('transitInfo');
             if (languageCode === 'en') {
                 element32.textContent = 'The Mandarin Oriental Taipei is accessible from either the Taipei Arena or Nanjing Fuxing stations on the Songshan-Xindian (Green) Line, or the Nanjing Fuxing station on the Wenshu (Brown) Line. The hotel is also accessible by multiple bus lines, just check google maps for the most convenient ones. (Don\'t forget to tap on and off on buses!)';
             } else if (languageCode === 'zh-tw') {
-                element32.textContent = '文華東方酒店可以從松山新店（綠線）的台北小巨蛋站或南京復興站，以及文湖線（棕線）的南京復興站抵達。酒店也可以搭乘多條公車線路，只需查看Google地圖找到最方便的路線即可。（別忘了在公車上刷卡！）';
+                element32.textContent = "捷運：可搭乘捷運「松山新店線(3號線)」或「文湖線(1號線) 」至南京復興站後，6、7號出口沿著慶城步行5分鐘。";
             }
             // Add more conditions for other languages as needed
         }
@@ -320,13 +329,13 @@
                 .then(data => {
                     var isUserInUS = data.country === 'US';
 
-                    // if (isUserInUS) {
+                    if (isUserInUS) {
                         // Set language to Mandarin Chinese if the user is in China
-                        // setLanguage('en');
-                    // } else {
+                        setLanguage('en');
+                    } else {
                         // Set the default language for users outside China
                         setLanguage(defaultLanguage);
-                    // }
+                    }
                 })
                 .catch(error => {
                     // Handle errors when fetching IP information
@@ -662,7 +671,7 @@
         </div>
         <div class="row section-padding">
             <div class="col-md-4 col-md-offset-4 text-center">
-                <a id="dress" class="btn btn-accent btn-small" data-toggle="modal" data-target="#dc-modal">
+                <a id="dress" class="btn btn-fill btn-small" data-toggle="modal" data-target="#dc-modal">
                     Dress code
                 </a>
             </div>
@@ -773,8 +782,8 @@
         </div>
     </div>
     <br>
-    <div class="add-margin"></div>
-    <div class="col-md-10 col-md-offset-1 text-center">
+    <div id="addMargin" class="add-margin"></div>
+    <div id="transitDiv" class="col-md-10 col-md-offset-1 text-center">
         <h4 id="transitHead">Prefer public transit?</h4>
         <h5><i class="fa fa-subway fa-4x"></i></h5>
         <p id="transitInfo">The Mandarin Oriental Taipei is accessible from either the Taipei Arena or Nanjing Fuxing stations on the Songshan-Xindian (Green) Line, or the Nanjing Fuxing station on the Wenshu (Brown) Line. The hotel is also accessible by multiple bus lines, just check google maps for the most convenient ones. (Don't forget to tap when getting on and off the buses!)</p>
